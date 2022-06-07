@@ -5,6 +5,7 @@ resource "aws_lambda_function" "test_lambda" {
   function_name = "EC2-Scheduler"
   role          = aws_iam_role.iam_for_lambda.arn
   handler       = "lambda.lambda_handler" # Python Handler Name ex) Python_File_Name.Method_Name
+  # memory_size = 10240
   timeout = 30
 
   source_code_hash = data.archive_file.lambda.output_base64sha256
