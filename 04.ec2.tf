@@ -1,4 +1,4 @@
-data "aws_ami" "ubuntu" {
+/* data "aws_ami" "ubuntu" {
   most_recent = true
 
   filter {
@@ -12,13 +12,14 @@ data "aws_ami" "ubuntu" {
   }
 
   owners = ["099720109477"] # Canonical
-}
+} */
 
 resource "aws_instance" "web" {
-  ami           = data.aws_ami.ubuntu.id
+  ami           = "ami-0ca3b0faa0c4c4bbd" # Amazon Linux 5.2
   instance_type = "t2.micro"
 
   tags = {
-    Name = "HelloWorld"
+    "Name" = "Lambda_Test"
+    "Key" = "Value"
   }
 }
