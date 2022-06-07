@@ -9,8 +9,7 @@ data "archive_file" "lambda" {
   source_dir  = "${path.module}/lambda" # 압축 할 local directory name
   output_path = "${path.module}/lambda.zip"
 } 
-git
-resource "aws_s3_bucket" "lambda_s3" {
+gitresource "aws_s3_bucket" "lambda_s3" {
   bucket = "hemmu-lambda-s3"
 
   tags = {
