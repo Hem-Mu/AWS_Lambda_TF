@@ -12,10 +12,10 @@
   }
 
   owners = ["099720109477"] # Canonical
-} */
+} Template is Lazy to use*/
 
 resource "aws_instance" "web" {
-  ami           = "ami-0ca3b0faa0c4c4bbd" # Amazon Linux 5.2
+  ami           = "ami-0ca3b0faa0c4c4bbd" # Amazon Linux 5.1
   instance_type = "t2.micro"
 
   tags = {
