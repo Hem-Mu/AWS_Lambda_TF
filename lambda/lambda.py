@@ -1,5 +1,5 @@
 import boto3
-region = 'ap-northeast-3'
+region = 'ap-northeast-2'
 instances = []
 ec2_r = boto3.resource('ec2')
 ec2 = boto3.client('ec2', region_name=region)
